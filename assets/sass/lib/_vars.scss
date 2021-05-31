@@ -5,8 +5,8 @@ sans_serif;
 $font_size_base: 16px;
 $font_weight_base: normal;
 $line_height_base: 1.4;
-$body_color: #333;
-$body_bg: #fff;
+$body_color: white;
+$body_bg: #0D0D1B;
 
 
 $headings_margin_bottom: 1em;
@@ -23,4 +23,5 @@ $table_cell_padding: .5em;
 $text_muted: lighten($body_color, 15%);
 
 $base: 8px;
-$corporateColorFilmin: rgb(71, 231, 138)
+$corporateColorFilmin: #06F99E;
+$corporateColorBg: #0D0D1B;
