@@ -1,0 +1,458 @@
+@import "lib/vars";
+@import "lib/mixins";
+@import "lib/reboot";
+@import "lib/fontawesome/font-awesome";
+@import "lib/fontface";
+@import "lib/keyframes";
+
+
+
+
+
+
+* {
+    //border: 1px solid $corporateColor;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+}
+
+html,
+body {
+    font-size: $base * 2;
+    font-family: $font_family_base;
+    line-height: $base * 3;
+    color: $body_color;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: "Gotham Light";
+    font-size: $base * 5;
+    margin-bottom: $base * 7;
+    line-height: $base * 7;
+}
+
+h2 {
+    font-family: "Gotham Light";
+    font-size: $base * 3;
+    margin-bottom: $base * 2;
+
+}
+
+h3 {
+    font-family: "Gotham Book";
+    font-size: $base * 2;
+    margin-bottom: $base;
+
+}
+
+
+.ul_styled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ul_italic {
+    text-align: center;
+    font-style: italic;
+    font-size: $base* 3;
+    line-height: $base * 4;
+    margin: $base* 3 0;
+}
+
+
+
+a {
+    width: 100%;
+}
+
+
+
+
+.layout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 350px calc(100% - 350px - 350px) 350px;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 0;
+
+    .header {
+        grid-area: 1 / 1 / span 1 / -1;
+    }
+
+    .sidebar {
+        grid-area: 2 / 1 / span 2 / span 1;
+    }
+
+    .main {
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+
+    .full_screen{
+        grid-area: 2 / 2 / span 1 / -1;
+
+    }
+
+    .tiny {
+        grid-area: 2 / 3 / span 1 / span 1;
+    }
+
+    .footer {
+        grid-area: 3 / 2 / span 1 / -1;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: $base * 2 $base * 3;
+    background-color: $corporateColorFilmin;
+
+    .header_holder {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header_brand {
+            img {
+                width: 100px;
+            }
+        }
+
+        .social {
+            display: flex;
+
+            .instagram,
+            .facebook,
+            .twitter {
+                .fa {
+                    color: white;
+                    font-size: $base * 3;
+                    margin-left: $base * 2;
+                    transition: ease 0.5s;
+
+                    &:hover {
+                        color: black;
+                        transition: ease 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    background-color: #fafafa;
+    font-size: 14px;
+    user-select: none;
+    position: fixed;
+    width: 350px;
+    height: calc(100% - 64px);
+
+    p{
+        margin: 0;
+    }
+
+
+    nav {
+        padding-top: $base* 4;
+        overflow-y: scroll;
+        height: 100%;
+
+        .menu_group {
+            margin-bottom: $base * 3;
+
+            .menu_tagline {
+                font-size: 14px;
+                text-transform: uppercase;
+                user-select: none;
+                color: #aaa;
+                padding-left: $base * 3;
+                font-family: "Gotham Medium"
+            }
+
+            .menu {
+                @extend .ul_styled;
+
+                .menu_item {
+                    font-weight: 600;
+                    color: #555;
+
+                    &.opened {
+                        .menu_item_heading {
+                            background-color: #eee;
+
+                            .fa {
+                                transform: rotate(0deg);
+                                transition: ease 300ms;
+                                color: #555;
+                            }
+                        }
+
+                        .menu_item_submenu {
+                            display: block;
+                        }
+                    }
+
+                    .menu_item_heading {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: $base * 1.5 $base * 3 $base * 1.5 $base * 5;
+
+                        a {
+                            color: inherit;
+                        }
+
+                        .fa {
+                            color: #aaa;
+                            transform: rotate(-90deg);
+                            transition: ease 300ms;
+                        }
+
+                        &:hover,
+                        &.active {
+                            background-color: #eee;
+                        }
+                    }
+
+                    .menu_item_submenu {
+                        display: none;
+
+                        .submenu {
+                            margin: 0.5rem 0;
+                            margin-left: $base * 6;
+
+
+                            @extend .ul_styled;
+
+                            .submenu_item {
+                                padding: $base * 1.5 $base;
+                                border-left: 3px solid #eee;
+
+                                a {
+                                    color: inherit;
+                                    display: block;
+                                }
+
+                                &:hover,
+                                &.active {
+                                    border-left: 3px solid black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.main {
+    padding: $base * 10 $base * 15 $base * 10 $base * 10;
+
+    section {
+        margin-top: $base * 7 ;
+
+        span {
+            font-family: "Gotham Medium";
+        }
+
+       
+        li {
+
+            margin-bottom: $base * 2;
+        }
+    }
+}
+
+.section_image {
+    margin: 2rem 0;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    figcaption {
+        font-family: "Gotham Light";
+        font-size: 12px;
+        text-align: right;
+        font-style: italic;
+    }
+}
+
+.boxes{
+    border: solid 1px #fdc62f;
+}
+
+.big{
+    position: relative;
+
+    .little{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.section_gallery {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+
+    img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &_3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &_2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.full_screen{
+    .section_video{
+    margin: $base * 4;
+}
+}
+
+.section_video{
+    margin: $base * 4 0 0 0;
+}
+
+
+.image_flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+        width: 50%;
+        &:first-child{
+            margin-right: $base;
+        }
+    }
+
+    
+}
+
+.tiny {
+    padding: $base * 9 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    
+
+
+
+    .tiny_heading {
+        text-transform: uppercase;
+        color: #aaa;
+    }
+
+    .tiny_items {
+        @extend .ul_styled;
+
+        .tiny_item {
+            border-left: 2px solid #aaa;
+            padding: $base $base * 2;
+            margin-left: $base * 2;
+            color: #aaa;
+            font-size: 14px;
+            user-select: none;
+            cursor: pointer;
+
+            &.active {
+                border-left: 2px solid black;
+                color: black;
+            }
+
+            a {
+                color: inherit;
+                user-select: none;
+            }
+        }
+    }
+}
+
+.footer {
+    margin: 0 $base * 4;
+    padding: $base * 3;
+    border-top: solid 1px #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        display: flex;
+        align-items: center;
+        
+        img{
+            width: 20px;
+            margin-right: $base;
+        }
+        p{
+            letter-spacing: 3px;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin: 0;
+
+
+        }
+    }
+    .team{
+        font-size: 12px;
+    }
+}
+
+
+
+
+@media print {
+    header, footer, aside{
+        display: none;
+        
+    }
+
+    .layout {
+        display: block;
+
+        .main {
+            margin: 0;
+            padding: 0;
+        }
+    
+    }
+
+    p, li{
+        font-size: 10pt;
+        line-height: 12pt;
+    }
+
+    h1{
+        margin: 0;  //NO FUNCIONAAAAAA
+    }
+
+    @page {
+        margin: 2cm 4cm;
+      }
+    
+}
