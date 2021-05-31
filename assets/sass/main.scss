@@ -148,7 +148,6 @@ a {
 }
 
 .sidebar {
-    background-color: #fafafa;
     font-size: 14px;
     user-select: none;
     position: fixed;
@@ -172,7 +171,7 @@ a {
                 font-size: 14px;
                 text-transform: uppercase;
                 user-select: none;
-                color: #aaa;
+                
                 padding-left: $base * 3;
                 font-family: "Gotham Medium"
             }
@@ -182,16 +181,16 @@ a {
 
                 .menu_item {
                     font-weight: 600;
-                    color: #555;
+                    
 
                     &.opened {
                         .menu_item_heading {
-                            background-color: #eee;
+                            background-color: #22223A;
 
                             .fa {
                                 transform: rotate(0deg);
                                 transition: ease 300ms;
-                                color: #555;
+                                
                             }
                         }
 
@@ -211,14 +210,14 @@ a {
                         }
 
                         .fa {
-                            color: #aaa;
                             transform: rotate(-90deg);
-                            transition: ease 300ms;
+                            transition: transform ease 300ms;
                         }
 
                         &:hover,
                         &.active {
-                            background-color: #eee;
+                            background-color: $corporateColorFilmin;
+                            color: $corporateColorBg;
                         }
                     }
 
@@ -243,7 +242,8 @@ a {
 
                                 &:hover,
                                 &.active {
-                                    border-left: 3px solid black;
+                                    border-left: 3px solid $corporateColorFilmin;
+                                    color: $corporateColorFilmin;
                                 }
                             }
                         }
