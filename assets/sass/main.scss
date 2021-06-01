@@ -24,27 +24,24 @@ body {
     font-size: $base * 2;
     font-family: $font_family_base;
     line-height: $base * 3;
-    color: $body_color;
+
     min-height: 100vh;
     scroll-behavior: smooth;
 }
 
 h1 {
-    font-family: "Gotham Light";
     font-size: $base * 5;
     margin-bottom: $base * 7;
     line-height: $base * 7;
 }
 
 h2 {
-    font-family: "Gotham Light";
     font-size: $base * 3;
     margin-bottom: $base * 2;
 
 }
 
 h3 {
-    font-family: "Gotham Book";
     font-size: $base * 2;
     margin-bottom: $base;
 
@@ -111,7 +108,9 @@ a {
     display: flex;
     justify-content: center;
     padding: $base * 2 $base * 3;
-    background-color: $corporateColorFilmin;
+    background-color: $body_bg;
+    border-bottom: 1px solid $corporateColorFilmin;
+    background-color: $body_color;
 
     .header_holder {
         width: 100%;
@@ -138,7 +137,7 @@ a {
                     transition: ease 0.5s;
 
                     &:hover {
-                        color: black;
+                        color: $corporateColorFilmin;
                         transition: ease 0.5s;
                     }
                 }
@@ -152,7 +151,10 @@ a {
     user-select: none;
     position: fixed;
     width: 350px;
-    height: calc(100% - 64px);
+    height: calc(100% - 60px);
+    background-color: $body_color;
+    color: $body_bg;
+
 
     p{
         margin: 0;
@@ -163,6 +165,7 @@ a {
         padding-top: $base* 4;
         overflow-y: scroll;
         height: 100%;
+        background-color: $body_color;
 
         .menu_group {
             margin-bottom: $base * 3;
@@ -173,7 +176,6 @@ a {
                 user-select: none;
                 
                 padding-left: $base * 3;
-                font-family: "Gotham Medium"
             }
 
             .menu {
@@ -263,7 +265,6 @@ a {
         margin-top: $base * 7 ;
 
         span {
-            font-family: "Gotham Medium";
         }
 
        
@@ -284,7 +285,6 @@ a {
     }
 
     figcaption {
-        font-family: "Gotham Light";
         font-size: 12px;
         text-align: right;
         font-style: italic;
@@ -333,6 +333,15 @@ a {
     .section_video{
     margin: $base * 4;
 }
+}
+
+
+.section_youtube{
+    
+    iframe{
+        width: 100%;
+        height: 360px;
+    }
 }
 
 .section_video{
@@ -397,27 +406,11 @@ a {
 .footer {
     margin: 0 $base * 4;
     padding: $base * 3;
-    border-top: solid 1px #aaa;
+    border-top: solid 1px $body_color;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    .logo{
-        display: flex;
-        align-items: center;
-        
-        img{
-            width: 20px;
-            margin-right: $base;
-        }
-        p{
-            letter-spacing: 3px;
-            font-size: 12px;
-            text-transform: uppercase;
-            margin: 0;
-
-
-        }
-    }
+    
     .team{
         font-size: 12px;
     }

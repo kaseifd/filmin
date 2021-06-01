@@ -14,12 +14,12 @@
 
 <body>
     <div class="layout">
-        
+
         <aside class="sidebar">
             <header class="header">
                 <div class="header_holder">
                     <div class="header_brand">
-                        <a href="/"><img src="/assets/img/logo_negativo.png" alt=""></a>
+                        <a href="/"><img src="/assets/img/logo.png" alt=""></a>
                     </div>
                     <div class="social">
                         <div class="instagram">
@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </header>
-            
+
             <nav>
                 <div class="menu_group">
                     <ul class="menu">
@@ -50,7 +50,7 @@
                     <ul class="menu">
                         <li class="menu_item">
                             <div class="menu_item_heading">
-                                <a href="/pages/personas.html">Personas</a>
+                                <a href="/pages/usuarios.html">Usuarios</a>
                             </div>
                         </li>
                         <li class="menu_item">
@@ -84,8 +84,10 @@
                             </div>
                             <div class="menu_item_submenu">
                                 <ul class="submenu">
-                                    <li class="submenu_item"><a href="/pages/visualizacion.html">Visualización de perfiles, comentarios y listas</a></li>
-                                    <li class="submenu_item"><a href="/pages/anti-spoiler.html">Sistema anti-spoiler</a></li>
+                                    <li class="submenu_item"><a href="/pages/visualizacion.html">Visualización de
+                                            perfiles, <br> comentarios y listas</a></li>
+                                    <li class="submenu_item"><a href="/pages/anti-spoiler.html">Sistema anti-spoiler</a>
+                                    </li>
                                     <li class="submenu_item"><a href="/pages/reporte.html">Sistema de reporte</a></li>
                                 </ul>
                             </div>
@@ -135,8 +137,10 @@
                                 <ul class="submenu">
                                     <li class="submenu_item"><a href="/pages/botones.html">Botones</a></li>
                                     <li class="submenu_item"><a href="/pages/buscador.html">Buscador</a></li>
-                                    <li class="submenu_item"><a href="/pages/modal-buscador.html">Ventana modal buscador</a></li>
-                                    <li class="submenu_item"><a href="/pages/modal-seguidores.html">Ventana modal Seguidores/Siguiendo</a></li>
+                                    <li class="submenu_item"><a href="/pages/modal-buscador.html">Ventana modal
+                                            buscador</a></li>
+                                    <li class="submenu_item"><a href="/pages/modal-seguidores.html">Ventana modal
+                                            Seguidores/Siguiendo</a></li>
                                     <li class="submenu_item"><a href="/pages/perfiles.html">Perfiles</a></li>
                                     <li class="submenu_item"><a href="/pages/playlists.html">Playlists</a></li>
                                 </ul>
@@ -147,38 +151,47 @@
             </nav>
         </aside>
 
-        <main class="full_screen">
-
+        <main class="main">
+            <h1>Introducción</h1>
             <section>
-                <div class="section_video">
-                    <video width="100%" height="100%" controls loop>
-                        <source src="/assets/videos/promo_cultura.mp4" type="video/mp4">
-                    </video>
-                </div>         
+                <h2>¿Qué es Filmin?</h2>
+                <p>Filmin es una plataforma de cine en línea creada en España. Ofrece contenidos audiovisuales, cine de
+                    autor, independiente, cine comercial, series y streaming de eventos como festivales.
+                    Se ofrece en forma de VBD(vídeo bajo demanda) en streaming (transmisión en directo).
+                    El usuario accede a todos los servicios y contenido de la plataforma a través de una suscripción,
+                    pagando una mensualidad para poder disfrutar de todo el contenido de Filmin.
+                    Sin tener suscripción el usuario puede alquilar ciertos servicios como películas o pases a estrenos
+                    de películas,festivales, etc.
+                </p>
+                <p>La plataforma se estrenó en el año 2006, pero los primeros años fueron de prueba sin la existencia de ofertas legales de consumo de la plataforma. Filmin se relanzó en junio del año 2010. Desde entonces el catálogo que oferta sigue creciendo, a la vez que el número de usuarios.
+                </p>
             </section>
 
-            <div class="section_youtube">
-              <iframe height="315" src="https://www.youtube.com/embed/--NDpkuY4t4" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            </div>
-    
-            <div class="section_figma">
-              <iframe height="450"
-                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F6goK6BUcF4W1dZ2D0VO4VY%2FGRM-Pr-Practica-03%3Fnode-id%3D378%253A1010"
-                allowfullscreen></iframe>
-            </div>
-    
-        </main> 
 
 
-       
+            <section class="section_youtube">
+                <h2>Vídeo promocional</h2>
+                <iframe src="https://www.youtube.com/embed/6mfEpT1Rwj0" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </section>
+        </main>
+
+        <aside class="tiny">
+            <h5 class="tiny_heading">
+                Contenidos
+            </h5>
+            <ul class="tiny_items">
+                <!--con js-->
+            </ul>
+        </aside>
+
+
+
         <footer class="footer">
-            <div class="logo">
-                <img src="/assets/img/logo.png" alt="">
-            </div>
-            <p class="team">Anastasiya Blonska, Silvia Carmena García-Bermejo, Marta Feijoo Domínguez & Alicia Garvín Moreno</p>
+            
+            <p class="team">Anastasiya Blonska, Silvia Carmena García-Bermejo, Marta Feijoo Domínguez & Alicia Garvín
+                Moreno</p>
         </footer>
     </div>
     <script type="module" src="/app/main.js"></script>
