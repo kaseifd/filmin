@@ -12,6 +12,7 @@
     "vite": "^2.2.3"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "swiper": "^6.6.1"
   }
 }
