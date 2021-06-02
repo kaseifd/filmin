@@ -15,7 +15,7 @@ module.exports = {
         hifi: resolve(__dirname, 'pages/hifi.html'),
         lofi: resolve(__dirname, 'pages/lofi.html'),
         midfi: resolve(__dirname, 'pages/midfi.html'),
-        modal_seguidores: resolve(__dirname, 'pages/ modal-seguidores.html'),
+        modal_seguidores: resolve(__dirname, 'pages/modal-seguidores.html'),
         perfiles: resolve(__dirname, 'pages/perfiles.html'),
         playlists: resolve(__dirname, 'pages/playlists.html'),
         reporte: resolve(__dirname, 'pages/reporte.html'),
