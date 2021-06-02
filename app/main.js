@@ -8,6 +8,7 @@ window.addEventListener('load', () => {
     initAllSwiper();
     secondaryNavScrollEvents();
     initSecondaryNav();
+    buttonEvents();
 })
 
 window.addEventListener("scroll", () => {
@@ -112,4 +113,71 @@ const secondaryNavScrollEvents = () => {
         tinyItem.classList.remove("active")
     });
     if (tiny[lastIn]) tiny[lastIn].classList.add("active")    
+}
+
+
+
+const buttonEvents = () => {
+    const button1 = document.querySelector(".button1")
+    const button2 = document.querySelector(".button2")
+    const button3 = document.querySelector(".button3")
+    const button4 = document.querySelector(".button4")
+    const button5 = document.querySelector(".button5")
+    const button6 = document.querySelector(".button6")
+
+
+
+    button1.addEventListener("mousedown", () => {
+        button1.classList.add("clicked")
+    })
+
+    button1.addEventListener("mouseup", () => {
+        button1.classList.remove("clicked")
+    })
+
+    button2.addEventListener("mousedown", () => {
+        button2.classList.add("clicked")
+    })
+
+    button2.addEventListener("mouseup", () => {
+        button2.classList.remove("clicked")
+    })
+
+    button3.addEventListener("mousedown", () => {
+        button3.classList.add("clicked")
+    })
+
+    button3.addEventListener("mouseup", () => {
+        button3.classList.remove("clicked")
+    })
+
+    button4.addEventListener("mousedown", () => {
+        button4.classList.add("clicked")
+    })
+
+    button4.addEventListener("mouseup", () => {
+        button4.classList.remove("clicked")
+    })
+
+    button5.addEventListener("mousedown", () => {
+        button5.classList.add("clicked")
+    })
+
+    button5.addEventListener("mouseup", () => {
+        button5.classList.remove("clicked")
+    })
+
+    button6.addEventListener("mousedown", () => {
+        button6.classList.add("clicked")
+    })
+
+    button6.addEventListener("mouseup", () => {
+        button6.classList.remove("clicked")
+        button6.style.backgroundColor="#E13B65"
+        button6.style.color="white"
+        button6.innerHTML="Guardado"
+    })
+
+
+    
 }

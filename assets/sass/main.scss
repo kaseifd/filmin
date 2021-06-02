@@ -5,11 +5,6 @@
 @import "lib/fontface";
 @import "lib/keyframes";
 
-
-
-
-
-
 * {
     //border: 1px solid $corporateColor;
 }
@@ -38,13 +33,11 @@ h1 {
 h2 {
     font-size: $base * 3;
     margin-bottom: $base * 3;
-
 }
 
 h3 {
     font-size: $base * 2;
     margin: $base * 4 0 $base * 2 0;
-
 }
 
 
@@ -57,19 +50,10 @@ h3 {
 .ul_italic {
     text-align: center;
     font-style: italic;
-    font-size: $base* 3;
+    font-size: $base * 3;
     line-height: $base * 4;
-    margin: $base* 3 0;
+    margin: $base * 3 0;
 }
-
-
-
-a {
-    width: 100%;
-}
-
-
-
 
 .layout {
     display: grid;
@@ -90,9 +74,8 @@ a {
         grid-area: 2 / 2 / span 1 / span 1;
     }
 
-    .full_screen{
+    .full_screen {
         grid-area: 2 / 2 / span 1 / -1;
-
     }
 
     .tiny {
@@ -155,14 +138,12 @@ a {
     background-color: $body_color;
     color: $body_bg;
 
-
-    p{
+    p {
         margin: 0;
     }
 
-
     nav {
-        padding-top: $base* 4;
+        padding-top: $base * 4;
         overflow-y: scroll;
         height: 100%;
         background-color: $body_color;
@@ -174,7 +155,7 @@ a {
                 font-size: 14px;
                 text-transform: uppercase;
                 user-select: none;
-                
+
                 padding-left: $base * 3;
             }
 
@@ -183,16 +164,14 @@ a {
 
                 .menu_item {
                     font-weight: 600;
-                    
 
                     &.opened {
                         .menu_item_heading {
-                            background-color: #22223A;
+                            background-color: #22223a;
 
                             .fa {
                                 transform: rotate(0deg);
                                 transition: ease 300ms;
-                                
                             }
                         }
 
@@ -230,7 +209,6 @@ a {
                             margin: 0.5rem 0;
                             margin-left: $base * 6;
 
-
                             @extend .ul_styled;
 
                             .submenu_item {
@@ -254,23 +232,21 @@ a {
             }
         }
     }
+}
 
-
+span {
+    font-weight: bold;
 }
 
 .main {
     padding: $base * 10 $base * 15 $base * 10 $base * 10;
 
     section {
-        margin-top: $base * 7 ;
+        margin-top: $base * 7;
+        overflow: hidden;
 
-        span {
-            font-weight:bold ;
-        }
 
-       
         li {
-
             margin-bottom: $base * 2;
         }
     }
@@ -292,34 +268,14 @@ a {
     }
 }
 
-
-
-.section_youtube{
-    
-    iframe{
+.section_youtube {
+    iframe {
         width: 100%;
         height: 360px;
     }
 }
 
-.section_video{
-    margin: $base * 4 0 0 0;
-}
 
-
-.image_flex{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    img{
-        width: 50%;
-        &:first-child{
-            margin-right: $base;
-        }
-    }
-
-    
-}
 
 .tiny {
     padding: $base * 9 0;
@@ -327,9 +283,6 @@ a {
     top: 0;
     right: 0;
     width: 350px;
-    
-
-
 
     .tiny_heading {
         text-transform: uppercase;
@@ -368,19 +321,243 @@ a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
-    .team{
+
+    .team {
         font-size: 12px;
+    }
+}
+
+.buttons_holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h3{
+        text-align: center;
+    }
+}
+
+.image_buttons {
+    background-image: url("../img/fondo.jpg");
+    height: 100%;
+    padding: $base * 4;
+   
+    .button_grid{
+        display: grid;
+        grid-template-rows: 1fr 1fr ;
+        grid-gap: 30px;
+        justify-items: center;
+    }
+
+    
+    .button1 {
+        color: #0d0d1b;
+        padding: $base $base * 2;
+        background-color: $corporateColorFilmin;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bolder;
+        width: 138px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        .fas {
+            margin-left: $base;
+        }
+
+        &:hover {
+            color: #0d0d1b;
+            background-color: rgba(6, 249, 160, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        &.clicked{
+            color: rgba(11, 11, 30, 0.6);
+            background-color: rgba(7, 125, 82, 0.6);
+            backdrop-filter: blur(10px);
+        }
+    }
+
+    .button2{
+        color: #0d0d1b;
+        padding: $base $base * 2;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bolder;
+        width: 139px;
+        text-align: center;
+
+
+        &:hover {
+            color: #0d0d1b;
+            background-color: hsla(0, 0%, 62%, 0.3);
+        }
+
+        &.clicked{
+            color: rgba(11, 11, 30, 0.6);
+            background-color: rgba(210, 210, 210, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        
+    }
+}
+
+
+.button{
+    user-select: none;
+
+
+}
+
+
+.buttons{
+    background-color: $body_color;
+    padding: $base * 4;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+    .button3{
+        color: white;
+        padding: $base $base * 2;
+        background-color: #22223A;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bolder;
+        width: 126px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        .fas {
+            margin-left: $base;
+        }
+
+        &:hover {
+            background-color: #3D3D53;
+        }
+
+        &.clicked{
+            color: #22223A;
+            background-color: #4F4F64;
+            backdrop-filter: blur(10px);
+        }
+
+    }
+
+    .button4{
+        color: #0d0d1b;
+        padding: $base $base * 2;
+        background-color: #06F99E;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bolder;
+        width: 231px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        .fas {
+            margin-left: $base;
+        }
+
+        &:hover {
+            color: #0d0d1b;
+            background-color: #7DC1A8;
+        }
+
+        &.clicked{
+            color: rgba(11, 11, 30, 0.6);
+            background-color: #478F75;
+            backdrop-filter: blur(10px);
+        }
+
+    }
+
+    .button5{
+        text-align: center;
+        color: white;
+        padding: $base $base * 2;
+        background-color: #E13B65;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bolder;
+        width: 88px;
+
+        
+        &:hover {
+            color: #E13B65;
+            background-color: white;
+        }
+
+        &.clicked{
+            color: #E13B65;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+    }
+
+    .button6{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #E13B65;
+        padding: $base $base * 2;
+        border: 1px solid #E13B65;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bolder;
+        width: 108px;
+
+        
+        .fas {
+            margin-left: $base;
+        }
+
+        &:hover {
+            color: #E56384;
+            border: 1px solid #E56384;
+
+        }
+
+        &.clicked{
+            color: #E48EA4;
+            border: 1px solid #E48EA4;
+
+        }
+
     }
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media print {
-    header, footer, aside{
+    header,
+    footer,
+    aside {
         display: none;
-        
     }
 
     .layout {
@@ -390,20 +567,19 @@ a {
             margin: 0;
             padding: 0;
         }
-    
     }
 
-    p, li{
+    p,
+    li {
         font-size: 10pt;
         line-height: 12pt;
     }
 
-    h1{
-        margin: 0;  //NO FUNCIONAAAAAA
+    h1 {
+        margin: 0; //NO FUNCIONAAAAAA
     }
 
     @page {
         margin: 2cm 4cm;
-      }
-    
+    }
 }
